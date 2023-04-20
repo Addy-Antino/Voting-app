@@ -22,6 +22,11 @@ app.use('/', (req,res,next)=>{
 
 })
 app.use (express.urlencoded({extended:false}))
+app.use('/api/v1/home',(req,res)=>{
+    res.json({
+        message:"CI/CD WORKING!!!!"
+    })
+})
 app.use('/api/v1',userRouter);
 app.use('/api/v1',votingRouter);
 app.use('/api/v1',electionRouter);
